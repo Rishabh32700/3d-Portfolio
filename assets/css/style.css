@@ -1,0 +1,144 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  filter: blur(2px);
+}
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 450px;
+
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1,
+h2,
+h3,
+blockquote {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  /* border: 2px solid red; */
+}
+
+header {
+  grid-column: 2 / span 5;
+  font-size: 2.5rem;
+  padding: 1rem;
+  margin-bottom: var(--spacing);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  animation: headerAnimation 1s infinite ease-in-out alternate;
+  -webkit-animation: headerAnimation 1s infinite ease-in-out alternate;
+}
+
+@keyframes headerAnimation {
+  100%{
+    transform: translate(30px, 30px);
+
+  }
+}
+
+header p {
+  font-size: 1.5rem;
+  /* border: 2px solid green; */
+}
+
+.text span,
+.text2 span,
+.text3 span,
+.text4 span,
+.text5 span {
+  position: relative;
+  display: inline-block;
+  /* border: 1px solid red; */
+}
+
+section {
+  grid-column: 2 / 8;
+  padding: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: var(--spacing);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  animation: headerAnimation 1s infinite ease-in-out alternate;
+  -webkit-animation: headerAnimation 1s infinite ease-in-out alternate;
+}
+
+section h3{
+  color: red;
+}
+
+section h4{
+  color: yellow;
+  font-size: 1rem;
+}
+
+section p{
+  margin-left: 2rem;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  grid-column: 2 / span 9;
+  margin-bottom: var(--spacing);
+  /* border: 2px solid red; */
+}
+
+blockquote p {
+  color: black;
+  background-color: white;
+  font-size: 4rem;
+  display: inline;
+  line-height: 1;
+}
+
+.left {
+  grid-column: 6 / 12;
+  /* border: 2px solid red; */
+}
+
+
+.AboutMe p span{
+  color: red;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.companyAndDate{
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+
+
