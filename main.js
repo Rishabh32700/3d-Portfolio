@@ -1,4 +1,4 @@
-import "./assets/css/style.css";
+import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import anime from "animejs";
@@ -27,7 +27,7 @@ camera.position.setX(-3);
 renderer.render(scene, camera);
 
 // Torus
-const torusTexture = new THREE.TextureLoader().load("./assets/images/background.jpg");
+const torusTexture = new THREE.TextureLoader().load("./background.jpg");
 
 const geometry = new THREE.TorusGeometry(10, 3, 14, 100);
 const material = new THREE.MeshStandardMaterial({
@@ -63,12 +63,12 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load("./assets/images/space1bg.jpeg");
+const spaceTexture = new THREE.TextureLoader().load("./space1bg.jpeg");
 scene.background = spaceTexture;
 
 // Avatar
 
-const aTexture = new THREE.TextureLoader().load("./assets/images/mypic.png");
+const aTexture = new THREE.TextureLoader().load("./mypic.png");
 const Rishabh = new THREE.Mesh(
   new THREE.BoxGeometry(2, 3, 0.1),
   new THREE.MeshBasicMaterial({ map: aTexture })
@@ -78,7 +78,7 @@ scene.add(Rishabh);
 
 // Moon
 
-const moonTexture = new THREE.TextureLoader().load("./assets/images/background.jpg");
+const moonTexture = new THREE.TextureLoader().load("./background.jpg");
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 31, 31),
